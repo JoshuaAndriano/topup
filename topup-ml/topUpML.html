@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windah Topup Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="main-aset/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gradient-to-r from-cyan-500 to-blue-500">
+    <!--HEADER-->
+    <header
+      class="bg-gray-800 text-white py-4 fixed top-0 left-0 w-full z-50 transition duration-300"
+      id="sticky-header"
+    >
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <!-- Hamburger Menu Button (visible only on mobile) -->
+        <button
+          id="hamburger-menu"
+          class="lg:hidden flex items-center px-3 py-2 text-white"
+          aria-label="Menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-bold">
+          <img
+            src="../main-aset/windah-header.png"
+            alt="Windah Logo"
+            class="h-8 mr-2 inline-block"
+          />
+        </a>
+
+        <!-- Navigation Menu -->
+        <nav class="hidden lg:flex space-x-4" id="nav-menu">
+          <a
+            href="../main.html"
+            class="relative hover:text-white transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >Beranda</a
+          >
+          <a
+            href="../lacak-pesanan/lacak.html"
+            class="relative hover:text-white transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >Cek Transaksi</a
+          >
+          <a
+            href="#"
+            class="relative hover:text-white transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >Kalkulator</a
+          >
+          <a
+            href="#"
+            class="relative hover:text-white transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >Berita & Promo</a
+          >
+        </nav>
+
+        <!-- Search and Buttons -->
+        <div class="hidden lg:flex items-center space-x-4">
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Search"
+              class="bg-gray-700 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-600"
+            />
+            <button
+              class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-300"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </div>
+          <a href="login/login.html">
+            <button
+              class="bg-teal-500 rounded-full px-4 py-2 hover:bg-teal-600"
+            >
+              Masuk
+            </button>
+          </a>
+          <a href="sign-up/signUp.html">
+            <button
+              class="bg-teal-500 rounded-full px-4 py-2 hover:bg-teal-600"
+            >
+              Daftar
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (Hidden by default) -->
+      <div class="lg:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 bg-gray-800">
+          <a href="#" class="block px-3 py-2 hover:bg-gray-700 rounded-md"
+            >Beranda</a
+          >
+          <a href="#" class="block px-3 py-2 hover:bg-gray-700 rounded-md"
+            >Cek Transaksi</a
+          >
+          <a href="#" class="block px-3 py-2 hover:bg-gray-700 rounded-md"
+            >Kalkulator</a
+          >
+          <a href="#" class="block px-3 py-2 hover:bg-gray-700 rounded-md"
+            >Berita & Promo</a
+          >
+          <div class="px-3 py-2">
+            <input
+              type="text"
+              placeholder="Search"
+              class="w-full bg-gray-700 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-600"
+            />
+          </div>
+          <div class="flex space-x-2 px-3 py-2">
+            <a href="login/login.html">
+              <button
+                class="bg-teal-500 rounded-full px-4 py-2 hover:bg-teal-600 flex-1"
+              >
+                Masuk
+              </button>
+            </a>
+            <a href="sign-up/signUp.html">
+              <button
+                class="bg-teal-500 rounded-full px-4 py-2 hover:bg-teal-600 flex-1"
+              >
+                Daftar
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      // JavaScript for header transparency and mobile menu functionality
+      const header = document.getElementById("sticky-header");
+      const hamburgerButton = document.getElementById("hamburger-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      // Handle scroll transparency
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("bg-gray-800/80", "backdrop-blur-sm");
+        } else {
+          header.classList.remove("bg-gray-800/80", "backdrop-blur-sm");
+        }
+      });
+
+      // Handle mobile menu toggle
+      hamburgerButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!header.contains(e.target)) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1024) {
+          // lg breakpoint
+          mobileMenu.classList.add("hidden");
+        }
+      });
+    </script>
+
+<main class="pt-16"></main>
+    <!-- Game Banner Section -->
+    <section class="relative">
+      <!-- Background Image -->
+      <div class="relative h-[400px]">
+        <img
+          src="aset-topUpML/banner.jpg"
+          alt="Mobile Legends Banner"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Game Logo Section -->
+      <div class="absolute left-10 bottom-[30px]">
+        <img
+          src="aset-topUpML/windah-ml.jpg"
+          alt="Mobile Legends Icon"
+          class="w-48 h-48 rounded-lg shadow-lg"
+        />
+      </div>
+
+      <!-- Game Info Container -->
+      <div class="w-full bg-gray-800/95">
+        <div class="container mx-auto px-4 py-6 pl-64">
+          <!-- Game Details -->
+          <div>
+            <h1 class="text-3xl font-bold text-white">MOBILE LEGENDS</h1>
+            <p class="text-gray-400 mb-4">Moonton</p>
+
+            <!-- Info Text -->
+            <div class="flex items-center gap-8 text-gray-300">
+              <div class="flex items-center gap-2">
+                <span>⚡ Proses Cepat</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span>💬 Layanan Chat 24/7</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span>💎 Diamonds</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-4 lg:mx-8 my-8"
+    >
+      <!-- Left Side - Steps Section (Full width on mobile) -->
+      <section class="bg-gray-800/95 p-4 sm:p-5 rounded-lg text-white h-fit lg:sticky" style="top: 5rem;">
+        <h2 class="font-bold mb-3 text-lg sm:text-xl">Langkah-langkah mengisi:</h2>
+      <ol class="space-y-2 text-sm sm:text-base">
+        <li class="flex gap-2">
+          <span class="font-bold">1.</span>
+          <span>Masukkan nomor ID dan Server</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="font-bold">2.</span>
+          <span>Pilih jumlah Diamond yang diinginkan</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="font-bold">3.</span>
+          <span>Pilih metode pembayaran yang diinginkan</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="font-bold">4.</span>
+          <span>Masukkan nomor Whatsapp Anda yang AKTIF dengan benar</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="font-bold">5.</span>
+          <span>Klik Order Now dan selesaikan pembayaran</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="font-bold">6.</span>
+          <span>Silahkan menunggu, Diamond akan masuk secara otomatis ke akun Anda</span>
+        </li>
+      </ol>
+
+      <div class="mt-4 border-t pt-4">
+        <p class="font-bold text-sm sm:text-base">Catatan:</p>
+        <ul class="mt-2 text-sm">
+          <li class="flex items-center gap-2">
+            <span>•</span>
+            <span>Jangan gabung nomor ID dan nomor server jadi satu</span>
+          </li>
+        </ul>
+        <p class="mt-6 text-sm">
+          ⚠️ Jika terdapat kendala, silahkan hubungi Admin di Whatsapp resmi kami
+          <a href="#" class="text-yellow-300 italic underline">DISINI.</a> ⚠️
+        </p>
+      </div>
+    </section>
+
+      <!-- Right Side - Form Sections -->
+      <div class="md:col-span-2 space-y-5">
+        <!-- Account Data Section -->
+        <section class="bg-gray-800/95 p-5 rounded-lg">
+          <div class="mb-4">
+            <h2 class="text-white font-bold text-lg flex items-center gap-2">
+              <span
+                class="bg-cyan-500 text-white rounded-full w-7 h-7 flex items-center justify-center"
+                >1</span
+              >
+              Masukkan Data Akun Anda
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-teal-50 rounded-lg p-3">
+              <input
+                type="text"
+                placeholder="ID"
+                class="w-full bg-transparent outline-none text-base"
+              />
+            </div>
+            <div class="bg-teal-50 rounded-lg p-3">
+              <input
+                type="text"
+                placeholder="Server"
+                class="w-full bg-transparent outline-none text-base"
+              />
+            </div>
+          </div>
+
+          <div class="text-white text-sm mt-3">
+            Contoh: Jika 91234567 (1234), maka ID = 91234567 dan Server = 1234
+          </div>
+        </section>
+
+        <!-- Membership Section -->
+        <section class="bg-gray-800/95 p-5 rounded-lg">
+          <div class="mb-4">
+            <h2 class="text-white font-bold text-lg flex items-center gap-2">
+              <span
+                class="bg-cyan-500 text-white rounded-full w-7 h-7 flex items-center justify-center"
+                >2</span
+              >
+              Mobile Legends Pass
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!--PRODUCT 1-->
+            <div class="bg-teal-50 p-4 rounded-lg">
+              <div class="flex justify-between items-center">
+                <div class="flex-1 mr-4">
+                  <h3 class="font-bold text-base">
+                    Weekly Diamond Pass (Misi Top Up +100)
+                  </h3>
+                  <p class="text-teal-800 text-base">Rp 28.000</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <svg
+                    class="w-8 h-8 text-purple-500"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2L2 19h20L12 2zm0 3l7 12H5l7-12z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-teal-50 p-4 rounded-lg">
+              <div class="flex justify-between items-center">
+                <div class="flex-1 mr-4">
+                  <h3 class="font-bold text-base">Weekly Diamond Pass x2</h3>
+                  <p class="text-teal-800 text-base">Rp 55.500</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <svg
+                    class="w-8 h-8 text-purple-500"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2L2 19h20L12 2zm0 3l7 12H5l7-12z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-teal-50 p-4 rounded-lg">
+              <div class="flex justify-between items-center">
+                <div class="flex-1 mr-4">
+                  <h3 class="font-bold text-base">Weekly Diamond Pass x3</h3>
+                  <p class="text-teal-800 text-base">Rp 83.000</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <svg
+                    class="w-8 h-8 text-purple-500"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2L2 19h20L12 2zm0 3l7 12H5l7-12z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-teal-50 p-4 rounded-lg">
+              <div class="flex justify-between items-center">
+                <div class="flex-1 mr-4">
+                  <h3 class="font-bold text-base">Weekly Diamond Pass x2</h3>
+                  <p class="text-teal-800 text-base">Rp 55.500</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <svg
+                    class="w-8 h-8 text-purple-500"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2L2 19h20L12 2zm0 3l7 12H5l7-12z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4 mt-4">
+            <h2 class="text-white font-bold text-lg">Diamonds</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!--PRODUCT 1-->
+            <div class="bg-teal-50 p-4 rounded-lg">
+              <div class="flex justify-between items-center">
+                <div class="flex-1 mr-4">
+                  <h3 class="font-bold text-base">
+                    Weekly Diamond Pass (Misi Top Up +100)
+                  </h3>
+                  <p class="text-teal-800 text-base">Rp 28.000</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <svg
+                    class="w-8 h-8 text-purple-500"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2L2 19h20L12 2zm0 3l7 12H5l7-12z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-teal-50 p-4 rounded-lg">
+              <div class="flex justify-between items-center">
+                <div class="flex-1 mr-4">
+                  <h3 class="font-bold text-base">
+                    Weekly Diamond Pass (Misi Top Up +100)
+                  </h3>
+                  <p class="text-teal-800 text-base">Rp 28.000</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <svg
+                    class="w-8 h-8 text-purple-500"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2L2 19h20L12 2zm0 3l7 12H5l7-12z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-teal-50 p-4 rounded-lg">
+              <div class="flex justify-between items-center">
+                <div class="flex-1 mr-4">
+                  <h3 class="font-bold text-base">
+                    Weekly Diamond Pass (Misi Top Up +100)
+                  </h3>
+                  <p class="text-teal-800 text-base">Rp 28.000</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <svg
+                    class="w-8 h-8 text-purple-500"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2L2 19h20L12 2zm0 3l7 12H5l7-12z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-teal-50 p-4 rounded-lg">
+              <div class="flex justify-between items-center">
+                <div class="flex-1 mr-4">
+                  <h3 class="font-bold text-base">
+                    Weekly Diamond Pass (Misi Top Up +100)
+                  </h3>
+                  <p class="text-teal-800 text-base">Rp 28.000</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <svg
+                    class="w-8 h-8 text-purple-500"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2L2 19h20L12 2zm0 3l7 12H5l7-12z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-teal-50 p-4 rounded-lg">
+              <div class="flex justify-between items-center">
+                <div class="flex-1 mr-4">
+                  <h3 class="font-bold text-base">
+                    Weekly Diamond Pass (Misi Top Up +100)
+                  </h3>
+                  <p class="text-teal-800 text-base">Rp 28.000</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <svg
+                    class="w-8 h-8 text-purple-500"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2L2 19h20L12 2zm0 3l7 12H5l7-12z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-teal-50 p-4 rounded-lg">
+              <div class="flex justify-between items-center">
+                <div class="flex-1 mr-4">
+                  <h3 class="font-bold text-base">
+                    Weekly Diamond Pass (Misi Top Up +100)
+                  </h3>
+                  <p class="text-teal-800 text-base">Rp 28.000</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <svg
+                    class="w-8 h-8 text-purple-500"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2L2 19h20L12 2zm0 3l7 12H5l7-12z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Payment Section -->
+        <section class="bg-gray-800/95 p-5 rounded-lg mb-5">
+          <div class="mb-4">
+            <h2 class="text-white font-bold text-lg flex items-center gap-2">
+              <span
+                class="bg-cyan-500 text-white rounded-full w-7 h-7 flex items-center justify-center"
+                >3</span
+              >
+              Masukkan Jumlah Total
+            </h2>
+          </div>
+          <div class="bg-gray-700/50 p-4 rounded-lg">
+            <label class="text-white mb-2 block">Jumlah</label>
+            <div class="flex gap-2">
+              <input
+                type="number"
+                value="1"
+                id="jumlahInput"
+                class="flex-1 bg-teal-50 rounded-lg p-3 outline-none appearance-none [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-inner-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              />
+              <button
+                onclick="increment()"
+                class="bg-teal-50 rounded-lg px-4 text-xl"
+              >
+                +
+              </button>
+              <button
+                onclick="decrement()"
+                class="bg-teal-50 rounded-lg px-4 text-xl"
+              >
+                -
+              </button>
+            </div>
+          </div>
+
+          <script>
+            function increment() {
+              const input = document.getElementById("jumlahInput");
+              let currentValue = parseInt(input.value);
+              input.value = currentValue + 1;
+            }
+
+            function decrement() {
+              const input = document.getElementById("jumlahInput");
+              let currentValue = parseInt(input.value);
+              if (currentValue > 1) {
+                input.value = currentValue - 1;
+              }
+            }
+          </script>
+        </section>
+
+        <!-- Payment Method Section -->
+        <section class="bg-gray-800/95 p-5 rounded-lg">
+          <div class="mb-4">
+            <h2 class="text-white font-bold text-lg flex items-center gap-2">
+              <span
+                class="bg-cyan-500 text-white rounded-full w-7 h-7 flex items-center justify-center"
+                >4</span
+              >
+              Pilih Metode Pembayaran
+            </h2>
+          </div>
+
+          <!-- Transfer Bank Button -->
+          <div class="mb-3">
+            <button
+              onclick="toggleSection('transfer-bank')"
+              class="w-full bg-cyan-600 hover:bg-cyan-700 p-4 rounded-lg text-white flex justify-between items-center"
+            >
+              <span>Transfer Bank</span>
+              <svg
+                id="transfer-bank-icon"
+                class="w-5 h-5 transform transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              id="transfer-bank-content"
+              class="hidden bg-cyan-100 rounded-lg mt-2 p-4"
+            >
+              <!-- Transfer Bank content here -->
+            </div>
+          </div>
+
+          <!-- E-Wallet Section -->
+          <div class="mb-3">
+            <button
+              onclick="toggleSection('e-wallet')"
+              class="w-full bg-cyan-600 hover:bg-cyan-700 p-4 rounded-lg text-white flex justify-between items-center"
+            >
+              <span>E-Wallet</span>
+              <svg
+                id="e-wallet-icon"
+                class="w-5 h-5 transform transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              id="e-wallet-content"
+              class="hidden bg-cyan-100 rounded-lg mt-2 p-4"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- OVO -->
+                <div class="bg-teal-50 p-4 rounded-lg">
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h3 class="font-bold text-sm">OVO</h3>
+                      <p class="text-xs text-gray-600">
+                        Verifikasi Otomatis (Open 24 Jam)
+                      </p>
+                      <p class="text-teal-800 text-sm mt-1">Rp 30.400</p>
+                    </div>
+                    <img
+                      src="path-to-ovo-logo.png"
+                      alt="OVO"
+                      class="w-12 h-12 object-contain"
+                    />
+                  </div>
+                </div>
+
+                <!-- ShopeePay -->
+                <div class="bg-teal-50 p-4 rounded-lg">
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h3 class="font-bold text-sm">ShopeePay</h3>
+                      <p class="text-xs text-gray-600">
+                        Verifikasi Otomatis (Open 24 Jam)
+                      </p>
+                      <p class="text-teal-800 text-sm mt-1">Rp 30.400</p>
+                    </div>
+                    <img
+                      src="path-to-shopeepay-logo.png"
+                      alt="ShopeePay"
+                      class="w-12 h-12 object-contain"
+                    />
+                  </div>
+                </div>
+
+                <!-- LinkAja -->
+                <div class="bg-teal-50 p-4 rounded-lg">
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h3 class="font-bold text-sm">LinkAja</h3>
+                      <p class="text-xs text-gray-600">
+                        Verifikasi Otomatis (Open 24 Jam)
+                      </p>
+                      <p class="text-teal-800 text-sm mt-1">Rp 30.400</p>
+                    </div>
+                    <img
+                      src="path-to-linkaja-logo.png"
+                      alt="LinkAja"
+                      class="w-12 h-12 object-contain"
+                    />
+                  </div>
+                </div>
+
+                <!-- QRIS -->
+                <div class="bg-teal-50 p-4 rounded-lg">
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h3 class="font-bold text-sm">QRIS</h3>
+                      <p class="text-xs text-gray-600">
+                        Verifikasi Otomatis (Open 24 Jam)
+                      </p>
+                      <p class="text-teal-800 text-sm mt-1">Rp 29.400</p>
+                    </div>
+                    <img
+                      src="path-to-qris-logo.png"
+                      alt="QRIS"
+                      class="w-12 h-12 object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Virtual Accounts -->
+          <div class="mb-3">
+            <button
+              onclick="toggleSection('virtual-accounts')"
+              class="w-full bg-cyan-600 hover:bg-cyan-700 p-4 rounded-lg text-white flex justify-between items-center"
+            >
+              <span>Virtual Accounts</span>
+              <svg
+                id="virtual-accounts-icon"
+                class="w-5 h-5 transform transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              id="virtual-accounts-content"
+              class="hidden bg-cyan-100 rounded-lg mt-2 p-4"
+            >
+              <!-- Virtual Accounts content here -->
+            </div>
+          </div>
+
+          <!-- Convenience Store -->
+          <div class="mb-3">
+            <button
+              onclick="toggleSection('convenience-store')"
+              class="w-full bg-cyan-600 hover:bg-cyan-700 p-4 rounded-lg text-white flex justify-between items-center"
+            >
+              <span>Convenience Store</span>
+              <svg
+                id="convenience-store-icon"
+                class="w-5 h-5 transform transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              id="convenience-store-content"
+              class="hidden bg-cyan-100 rounded-lg mt-2 p-4"
+            >
+              <!-- Convenience Store content here -->
+            </div>
+          </div>
+        </section>
+
+        <script>
+          function toggleSection(sectionId) {
+            // Get the content and icon elements
+            const content = document.getElementById(`${sectionId}-content`);
+            const icon = document.getElementById(`${sectionId}-icon`);
+
+            // Toggle the content visibility
+            content.classList.toggle("hidden");
+
+            // Rotate the icon when section is open
+            if (content.classList.contains("hidden")) {
+              icon.classList.remove("rotate-180");
+            } else {
+              icon.classList.add("rotate-180");
+            }
+
+            // Close other sections
+            const allContents = document.querySelectorAll('[id$="-content"]');
+            const allIcons = document.querySelectorAll('[id$="-icon"]');
+
+            allContents.forEach((item) => {
+              if (item.id !== `${sectionId}-content`) {
+                item.classList.add("hidden");
+              }
+            });
+
+            allIcons.forEach((item) => {
+              if (item.id !== `${sectionId}-icon`) {
+                item.classList.remove("rotate-180");
+              }
+            });
+          }
+        </script>
+
+        <!-- WhatsApp Input Section -->
+        <section class="bg-gray-800/95 p-5 rounded-lg mb-5">
+          <div class="mb-4">
+            <h2 class="text-white font-bold text-lg flex items-center gap-2">
+              <span
+                class="bg-cyan-500 text-white rounded-full w-7 h-7 flex items-center justify-center"
+                >5</span
+              >
+              No. WhatsApp
+            </h2>
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-white block">No. WhatsApp</label>
+            <div class="flex bg-teal-50 rounded-lg overflow-hidden">
+              <input
+                type="text"
+                placeholder="Masukkan Nomor WhatsApp Anda"
+                class="flex-1 px-3 py-2 outline-none bg-transparent"
+              />
+            </div>
+            <p class="text-gray-300 text-sm">
+              Nomor ini akan dihubungi jika ada masalah
+            </p>
+          </div>
+        </section>
+
+        <!-- Order Button -->
+        <button
+          class="w-full bg-cyan-400 hover:bg-cyan-600 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+            />
+          </svg>
+          Pesan Sekarang!
+        </button>
+      </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 sm:py-16 px-4 sm:px-20">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 lg:gap-24 max-w-7xl mx-auto"
+      >
+        <!-- Logo & Description -->
+        <div class="space-y-6 sm:space-y-12">
+          <img
+            src="../main-aset/footer-logo.jpg"
+            alt="Windah"
+            class="w-32 sm:w-40"
+          />
+          <p class="text-sm sm:text-base leading-relaxed pr-0 sm:pr-8">
+            Selamat datang di WINDAHTOPUPSTORE! Topup Game murah dan Terpercaya
+          </p>
+          <div class="flex gap-4 sm:gap-6">
+            <a
+              href="#"
+              class="text-pink-500 hover:text-pink-400 transition-colors"
+            >
+              <svg
+                class="w-5 h-5 sm:w-6 sm:h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                ...
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="text-green-500 hover:text-green-400 transition-colors"
+            >
+              <svg
+                class="w-5 h-5 sm:w-6 sm:h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                ...
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Kemitraan -->
+        <div class="space-y-4 sm:space-y-6">
+          <h3 class="text-cyan-300 text-sm sm:text-base font-medium">
+            Kemitraan
+          </h3>
+          <ul class="space-y-2 sm:space-y-4 text-xs sm:text-sm">
+            <li>
+              <a href="#" class="hover:text-cyan-300 transition-colors"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-cyan-300 transition-colors"
+                >Deposit</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-cyan-300 transition-colors"
+                >Daftar Harga</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Peta Situs -->
+        <div class="space-y-4 sm:space-y-6">
+          <h3 class="text-cyan-300 text-sm sm:text-base font-medium">
+            Peta Situs
+          </h3>
+          <ul
+            class="grid grid-cols-2 sm:grid-cols-1 gap-y-2 sm:gap-y-4 text-xs sm:text-sm"
+          >
+            <li>
+              <a href="#" class="hover:text-cyan-300 transition-colors"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-cyan-300 transition-colors"
+                >Masuk</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-cyan-300 transition-colors"
+                >Daftar</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-cyan-300 transition-colors"
+                >Cek Transaksi</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-cyan-300 transition-colors"
+                >Hubungi Kami</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-cyan-300 transition-colors"
+                >Ulasan</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Legalitas -->
+        <div class="space-y-4 sm:space-y-6">
+          <h3 class="text-cyan-300 text-sm sm:text-base font-medium">
+            Legalitas
+          </h3>
+          <ul class="space-y-2 sm:space-y-4 text-xs sm:text-sm">
+            <li>
+              <a href="#" class="hover:text-cyan-300 transition-colors"
+                >Kebijakan Pribadi</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-cyan-300 transition-colors"
+                >Syarat & Ketentuan</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="mt-8 sm:mt-16 text-xs text-center sm:text-left max-w-7xl mx-auto"
+      >
+        <p>2024 Windah Top Up. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
